@@ -47,7 +47,7 @@ def login():
     if form.validate_on_submit():
         if form.email.data == "admin@gmail.com" and form.password.data == "12345":
             flash("You have been successfully logged in!!", 'success')
-            redirect(url_for('home'))  # "home" for the function name not "home.html"
+            return redirect(url_for('home'))  # "home" for the function name not "home.html"
         else:
             flash("sorry, please enter valid credentials", "danger")  # danger is the type of the alert
     return render_template("login.html", title="Login", form=form)
