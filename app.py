@@ -51,7 +51,7 @@ posts = [
 
 
 @app.route('/')
-@app.route('/home')
+@app.route('/home')  # both will route to same page
 def home():
     return render_template("home.html", posts=posts)
 
